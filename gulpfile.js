@@ -9,21 +9,8 @@ var systemjsBuilder = require('systemjs-builder');
 gulp.task('build', function (callback) {
     var builder = new systemjsBuilder("src", "src/systemjs.config.js");
     builder.config({
-        map : {
-            "rxjs": "node_modules/rxjs",
-            "@angular": "node_modules/@angular"
-        },
-        packages: {
-            "src": { defaultExtension: "js" },
-            "app": { defaultExtension: "js" },
-            "rxjs": { defaultExtension: "js" },
-            "@angular/common": { main: "index.js", defaultExtension: "js" },
-            "@angular/compiler": { main: "index.js", defaultExtension: "js" },
-            "@angular/core": { main: "index.js", defaultExtension: "js" },
-            "@angular/http": { main: "index.js", defaultExtension: "js" },
-            "@angular/platform-browser": { main: "index.js", defaultExtension: "js" },
-            "@angular/platform-browser-dynamic": { main: "index.js", defaultExtension: "js" },
-            "@angular/testing": { main: "index.js", defaultExtension: "js" },
+        paths: {
+            './node_modules/': '../node_modules/'
         }
     });
     builder.bundle("app/main.js", "dist/out.js")
