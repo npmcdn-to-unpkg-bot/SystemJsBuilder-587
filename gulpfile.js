@@ -10,7 +10,7 @@ gulp.task('build', function (callback) {
     var builder = new systemjsBuilder("src", "src/systemjs.config.js");
     builder.config({
         paths: {
-            './node_modules/': '../node_modules/'
+            './node_modules/*': '../node_modules/*'
         }
     });
     builder.bundle("app/main.js", "dist/out.js")
