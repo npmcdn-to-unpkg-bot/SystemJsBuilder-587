@@ -3,9 +3,9 @@
     var map = {
         "@angular": "../node_modules/@angular",
         //Not work build
-        //"rxjs": "../node_modules/rxjs"
+        "rxjs": "../node_modules/rxjs"
         //Work build
-        "rxjs": "https://npmcdn.com/rxjs@5.0.0-beta.6"
+        //"rxjs": "https://npmcdn.com/rxjs@5.0.0-beta.6"
     };
     
     // packages tells the System loader how to load when no filename and/or no extension
